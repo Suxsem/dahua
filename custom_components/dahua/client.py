@@ -601,7 +601,7 @@ class DahuaClient:
         """
         async_access_control_open_door opens a door via a VTO
         """
-        url = "/cgi-bin/accessControl.cgi?action=openDoor&UserID=101&Type=Remote&channel={0}".format(door_id)
+        url = "/cgi-bin/accessControl.cgi?action=openDoor&Type=Remote&channel={0}".format(door_id)
         return await self.get(url)
 
     async def enable_motion_detection(self, channel: int, enabled: bool) -> dict:
